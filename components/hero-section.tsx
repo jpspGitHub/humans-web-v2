@@ -1,12 +1,17 @@
+'use client'
 import { ArrowRight, Shield, Users, Award } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import logo from './../public/assets/images/logo-large-white.svg'
 import Image from "next/image"
+import { useRouter } from "next/router"
+import { scrollToSection } from "@/lib/utils"
 
 export function HeroSection() {
+
+
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -40,6 +45,7 @@ export function HeroSection() {
             <Button
               size="lg"
               className="bg-primary-accent hover:bg-primary-accent/90 text-light-neutral px-8 py-4 text-lg"
+              onClick={() => scrollToSection('contact')}
             >
               Contactanos
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -48,8 +54,11 @@ export function HeroSection() {
               size="lg"
               variant="outline"
               className="border-light-neutral text-light-neutral hover:bg-light-neutral hover:text-primary px-8 py-4 text-lg bg-transparent"
+              onClick={() => scrollToSection('services')}
+
             >
               Ver Capacitaciones
+
             </Button>
           </div>
 

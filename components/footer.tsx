@@ -5,10 +5,12 @@ import logo from './../public/assets/images/logo-large-white.svg'
 
 export function Footer() {
   const quickLinks = [
-    { href: "#inicio", label: "Inicio" },
-    { href: "#quienes-somos", label: "Quiénes Somos" },
-    { href: "#capacitaciones", label: "Capacitaciones" },
-    { href: "#contacto", label: "Contacto" },
+    { href: "#hero", label: "Inicio" },
+    { href: "#about", label: "Quiénes Somos" },
+    // { href: "#metodologia", label: "Metodología" },
+    { href: "#services", label: "Capacitaciones" },
+    // { href: "#empresas", label: "Empresas" },
+    { href: "#contact", label: "Contacto" },
   ]
 
   const services = [

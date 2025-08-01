@@ -18,7 +18,6 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "HUMAN - Especialistas en Primeros Auxilios",
   description: "Formación, acompañamiento y cultura del cuidado para profesionales y empresas",
-  generator: 'v0.dev',
   icons: {
     icon: "/assets/images/logo-mini.svg",
   },

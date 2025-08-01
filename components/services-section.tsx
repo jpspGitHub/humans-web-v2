@@ -1,6 +1,8 @@
+'use client'
 import { BookOpen, Building, Users, BadgeIcon as Certificate } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { scrollToSection } from "@/lib/utils"
 
 export function ServicesSection() {
   const services = [
@@ -36,7 +38,7 @@ export function ServicesSection() {
   ]
 
   return (
-    <section id="capacitaciones" className="py-20 bg-light-neutral">
+    <section id="services" className="py-20 bg-light-neutral">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold font-title text-primary mb-6">Nuestros Programas</h2>
@@ -54,14 +56,14 @@ export function ServicesSection() {
               className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               <CardHeader className="pb-4">
-                <div className="w-12 h-12 bg-secondary-accent/10 rounded-lg flex items-center justify-center mb-4">
-                  <service.icon className="w-6 h-6 text-secondary-accent" />
+                <div className="w-12 h-12 bg-primary-accent/10 rounded-lg flex items-center justify-center mb-4">
+                  <service.icon className="w-6 h-6 text-primary-accent" />
                 </div>
-                <CardTitle className="text-xl font-title text-primary min-h-[3rem]">{service.title}</CardTitle>
+                <CardTitle className="text-xl font-title text-primary min-h-[3em]">{service.title}</CardTitle>
                 {/* <div className="text-sm text-primary-accent font-medium">Duración: {service.duration}</div> */}
               </CardHeader>
               <CardContent>
-                <p className="text-neutral-600 mb-6 leading-relaxed">{service.description}</p>
+                <p className="text-neutral-600 mb-6 leading-relaxed min-h-[10em]">{service.description}</p>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-neutral-600">
@@ -88,7 +90,11 @@ export function ServicesSection() {
               Diseñamos programas de capacitación específicos para tu empresa o institución, adaptados a tus necesidades
               particulares y sector de actividad.
             </p>
-            <Button size="lg" className="bg-primary-accent hover:bg-primary-accent/90 text-light-neutral">
+            <Button
+              size="lg"
+              className="bg-primary-accent hover:bg-primary-accent/90 text-light-neutral"
+              onClick={() => scrollToSection('contact')}
+            >
               Solicitar Cotización
             </Button>
           </div>
