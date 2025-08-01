@@ -7,17 +7,18 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import logo from './../public/assets/images/logo-mini.svg'
 import Image from "next/image"
+import { scrollToSection } from "@/lib/utils"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { href: "#inicio", label: "Inicio" },
-    { href: "#quienes-somos", label: "Quiénes Somos" },
-    { href: "#metodologia", label: "Metodología" },
-    { href: "#capacitaciones", label: "Capacitaciones" },
-    { href: "#empresas", label: "Empresas" },
-    { href: "#contacto", label: "Contacto" },
+    { href: "#hero", label: "Inicio" },
+    { href: "#about", label: "Quiénes Somos" },
+    // { href: "#metodologia", label: "Metodología" },
+    { href: "#services", label: "Capacitaciones" },
+    // { href: "#empresas", label: "Empresas" },
+    { href: "#contact", label: "Contacto" },
   ]
 
   return (
@@ -26,12 +27,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-          <Image src={logo.src} alt="Logo" width={50} height={50} className="rounded-full"/>
-            {/* <div className="w-8 h-8 bg-primary-accent rounded-full flex items-center justify-center">
-              
-              
-            </div>
-            <span className="text-xl font-bold font-title text-primary">HUMAN</span> */}
+            <Image src={logo.src} alt="Logo" width={50} height={50} className="rounded-full" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -49,7 +45,10 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="bg-primary-accent hover:bg-primary-accent/90 text-light-neutral">Contactar Ahora</Button>
+            <Button
+              className="bg-primary-accent hover:bg-primary-accent/90 text-light-neutral"
+              onClick={() => scrollToSection('contact')}
+            >Contactar Ahora</Button>
           </div>
 
           {/* Mobile Menu */}
@@ -71,7 +70,10 @@ export function Header() {
                     {item.label}
                   </Link>
                 ))}
-                <Button className="bg-primary-accent hover:bg-primary-accent/90 text-light-neutral mt-4">
+                <Button
+                  className="bg-primary-accent hover:bg-primary-accent/90 text-light-neutral mt-4"
+                  onClick={() => scrollToSection('contact')}
+                >
                   Contactar Ahora
                 </Button>
               </div>
