@@ -30,7 +30,7 @@ export function ContactSection() {
       details: ["N° 17-1996"],
       action: "Ver registro",
     },
-    
+
   ]
 
   return (
@@ -78,19 +78,19 @@ export function ContactSection() {
             <Card className="border-0 shadow-lg">
               <CardContent className="p-8">
                 <h3 className="text-xl font-semibold font-title text-primary mb-6">Envíanos un mensaje</h3>
-                <form className="space-y-6">
+                <form className="space-y-6" action={'https://formspree.io/f/mzzvapvo'} method="POST">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-2">
                         Nombre completo
                       </label>
-                      <Input id="name" type="text" placeholder="Tu nombre" className="w-full" />
+                      <Input id="name" name="name" type="text" placeholder="Tu nombre" className="w-full" />
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-2">
                         Email
                       </label>
-                      <Input id="email" type="email" placeholder="tu@email.com" className="w-full" />
+                      <Input id="email" name="email" type="email" placeholder="tu@email.com" className="w-full" />
                     </div>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -98,13 +98,13 @@ export function ContactSection() {
                       <label htmlFor="phone" className="block text-sm font-medium text-neutral-700 mb-2">
                         Teléfono
                       </label>
-                      <Input id="phone" type="tel" placeholder="+598 123 456 789 " className="w-full" />
+                      <Input id="phone" name="phone" type="tel" placeholder="+598 123 456 789 " className="w-full" />
                     </div>
                     <div>
                       <label htmlFor="company" className="block text-sm font-medium text-neutral-700 mb-2">
                         Empresa (opcional)
                       </label>
-                      <Input id="company" type="text" placeholder="Nombre de tu empresa" className="w-full" />
+                      <Input id="company" name="company" type="text" placeholder="Nombre de tu empresa" className="w-full" />
                     </div>
                   </div>
                   <div>
@@ -113,6 +113,7 @@ export function ContactSection() {
                     </label>
                     <select
                       id="service"
+                      name="service"
                       className="w-full px-3 py-2 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-accent focus:border-transparent"
                     >
                       <option value="">Selecciona un servicio</option>
@@ -129,6 +130,7 @@ export function ContactSection() {
                     </label>
                     <Textarea
                       id="message"
+                      name="message"
                       rows={4}
                       placeholder="Cuéntanos más sobre tus necesidades de capacitación..."
                       className="w-full"
