@@ -4,9 +4,6 @@ import { BookOpen, Building, Users, BadgeIcon as Certificate } from "lucide-reac
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { scrollToSection } from "@/lib/utils"
-import { BookOpen, Building, Users, BadgeIcon as Certificate } from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 
 export function ServicesSection() {
   const services = [
