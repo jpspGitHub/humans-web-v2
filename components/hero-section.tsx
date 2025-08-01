@@ -1,4 +1,5 @@
 'use client'
+        
 import { ArrowRight, Shield, Users, Award } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -55,10 +56,8 @@ export function HeroSection() {
               variant="outline"
               className="border-light-neutral text-light-neutral hover:bg-light-neutral hover:text-primary px-8 py-4 text-lg bg-transparent"
               onClick={() => scrollToSection('services')}
-
             >
               Ver Capacitaciones
-
             </Button>
           </div>
 

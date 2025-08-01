@@ -28,11 +28,6 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image src={logo.src} alt="Logo" width={50} height={50} className="rounded-full" />
-            {/* <div className="w-8 h-8 bg-primary-accent rounded-full flex items-center justify-center">
-              
-              
-            </div>
-            <span className="text-xl font-bold font-title text-primary">HUMAN</span> */}
           </Link>
 
           {/* Desktop Navigation */}

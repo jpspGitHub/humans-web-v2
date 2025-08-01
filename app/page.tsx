@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { CompaniesSection } from "@/components/companies-section"
 
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
