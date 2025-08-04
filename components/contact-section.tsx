@@ -62,9 +62,9 @@ export function ContactSection() {
                             {detail}
                           </p>
                         ))}
-                        <Button variant="link" className="text-primary-accent p-0 h-auto text-sm mt-2">
+                        {/* <Button variant="link" className="text-primary-accent p-0 h-auto text-sm mt-2">
                           {info.action}
-                        </Button>
+                        </Button> */}
                       </div>
                     </div>
                   </CardContent>

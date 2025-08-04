@@ -76,6 +76,7 @@ export function ServicesSection() {
                 <Button
                   variant="outline"
                   className="w-full border-primary-accent text-primary-accent hover:bg-primary-accent hover:text-light-neutral bg-transparent"
+                  onClick={() => scrollToSection('contact')}
                 >
                   Más Información
                 </Button>

@@ -2,7 +2,13 @@ import { Heart, Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucid
 import Image from "next/image"
 import Link from "next/link"
 import logo from './../public/assets/images/logo-large-white.svg'
-
+import { Dialog, DialogClose, DialogContent, DialogDescription, DialogOverlay, DialogPortal, DialogTitle, DialogTrigger } from "./ui/dialog"
+import { TermsAndConditions } from "./terms-and-conditions"
+import { Button } from "./ui/button"
+// import * as React from "react";
+// import {Dialog} from "radix-ui";
+// import {Cross2Icon} from "@radix-ui/react-collection";
+// import "./styles.css";
 export function Footer() {
   const quickLinks = [
     { href: "#hero", label: "Inicio" },
@@ -93,12 +99,24 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-neutral-300 text-sm">© 2025 HUMAN. Todos los derechos reservados.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              {/* <Link href="#" className="text-neutral-300 hover:text-light-neutral text-sm transition-colors">
-                Política de Privacidad
-              </Link> */}
-              {/* <Link href="#" className="text-neutral-300 hover:text-light-neutral text-sm transition-colors">
-                Términos de Servicio
-              </Link> */}
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Link href="#" className="text-neutral-300 hover:text-light-neutral text-sm transition-colors">
+                    Términos y Condiciones
+                  </Link>
+                </DialogTrigger>
+                <DialogPortal>
+                  <DialogOverlay className="DialogOverlay" />
+                  <DialogContent className="DialogContent">
+                    <TermsAndConditions />
+                    <DialogClose asChild>
+                      <Button size="lg" className="bg-primary-accent hover:bg-primary-accent/90 text-light-neutral px-8 py-4">
+                        Salir de terminos y condiciones
+                      </Button>
+                    </DialogClose>
+                  </DialogContent>
+                </DialogPortal>
+              </Dialog>
             </div>
           </div>
         </div>
