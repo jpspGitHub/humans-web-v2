@@ -1,5 +1,5 @@
 'use client'
-        
+
 import { ArrowRight, Shield, Users, Award } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -12,7 +12,7 @@ export function HeroSection() {
 
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-[120vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -60,7 +60,13 @@ export function HeroSection() {
               Ver Capacitaciones
             </Button>
           </div>
-
+          {/* Scroll Indicator */}
+          {/* <div className=" left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div className="w-6 h-10 border-2 border-light-neutral/50 rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-light-neutral/50 rounded-full mt-2 animate-pulse" />
+            </div>
+          </div> */}
+          
           {/* Stats Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
             <Card className="bg-light-neutral/10 backdrop-blur-sm border-light-neutral/20">
@@ -88,12 +94,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-light-neutral/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-light-neutral/50 rounded-full mt-2 animate-pulse" />
-        </div>
-      </div>
+
     </section>
   )
 }
