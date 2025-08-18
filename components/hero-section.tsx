@@ -66,7 +66,6 @@ export function HeroSection() {
               <div className="w-1 h-3 bg-light-neutral/50 rounded-full mt-2 animate-pulse" />
             </div>
           </div> */}
-
           {/* Stats Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
             <Card className="bg-light-neutral/10 backdrop-blur-sm border-light-neutral/20">
