@@ -76,7 +76,7 @@ export function ServicesSection() {
                 <Button
                   variant="outline"
                   className="w-full border-primary-accent text-primary-accent hover:bg-primary-accent hover:text-light-neutral bg-transparent"
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => scrollToSection('contact', `services-section (${service.title})`)}
                 >
                   Más Información
                 </Button>
@@ -95,7 +95,7 @@ export function ServicesSection() {
             <Button
               size="lg"
               className="bg-primary-accent hover:bg-primary-accent/90 text-light-neutral"
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection('contact', 'services-section')}
             >
               Solicitar Cotización
             </Button>

@@ -17,7 +17,7 @@ export function Header() {
     { href: "#about", label: "Quiénes Somos" },
     // { href: "#metodologia", label: "Metodología" },
     { href: "#services", label: "Capacitaciones" },
-    // { href: "#empresas", label: "Empresas" },
+    { href: "#companies", label: "Empresas" },
     { href: "#contact", label: "Contacto" },
   ]
 
@@ -47,7 +47,7 @@ export function Header() {
           <div className="hidden md:block">
             <Button
               className="bg-primary-accent hover:bg-primary-accent/90 text-light-neutral"
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection('contact', 'header(CTA)')}
             >Contactar Ahora</Button>
           </div>
 
@@ -72,7 +72,7 @@ export function Header() {
                 ))}
                 <Button
                   className="bg-primary-accent hover:bg-primary-accent/90 text-light-neutral mt-4"
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => scrollToSection('contact', 'header')}
                 >
                   Contactar Ahora
                 </Button>
