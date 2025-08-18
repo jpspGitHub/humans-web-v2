@@ -17,7 +17,7 @@ export function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/assets/images/cover.jpg?height=1080&width=1920')`,
+          backgroundImage: `url('/assets/images/cover1.jpeg?height=1080&width=1920')`,
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-primary/40" />
@@ -46,7 +46,7 @@ export function HeroSection() {
             <Button
               size="lg"
               className="bg-primary-accent hover:bg-primary-accent/90 text-light-neutral px-8 py-4 text-lg"
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection('contact', 'hero-section')}
             >
               Contactanos
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -55,7 +55,7 @@ export function HeroSection() {
               size="lg"
               variant="outline"
               className="border-light-neutral text-light-neutral hover:bg-light-neutral hover:text-primary px-8 py-4 text-lg bg-transparent"
-              onClick={() => scrollToSection('services')}
+              onClick={() => scrollToSection('services', 'hero-section')}
             >
               Ver Capacitaciones
             </Button>
@@ -66,13 +66,13 @@ export function HeroSection() {
               <div className="w-1 h-3 bg-light-neutral/50 rounded-full mt-2 animate-pulse" />
             </div>
           </div> */}
-          
+
           {/* Stats Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
             <Card className="bg-light-neutral/10 backdrop-blur-sm border-light-neutral/20">
               <CardContent className="p-6 text-center">
                 <Users className="w-8 h-8 text-secondary-accent mx-auto mb-3" />
-                <div className="text-2xl font-bold font-title text-light-neutral mb-1">500+</div>
+                <div className="text-2xl font-bold font-title text-light-neutral mb-1">1000+</div>
                 <div className="text-neutral-300 text-sm">Profesionales Capacitados</div>
               </CardContent>
             </Card>
@@ -86,7 +86,7 @@ export function HeroSection() {
             <Card className="bg-light-neutral/10 backdrop-blur-sm border-light-neutral/20">
               <CardContent className="p-6 text-center">
                 <Award className="w-8 h-8 text-secondary-accent mx-auto mb-3" />
-                <div className="text-2xl font-bold font-title text-light-neutral mb-1">100+</div>
+                <div className="text-2xl font-bold font-title text-light-neutral mb-1">20+</div>
                 <div className="text-neutral-300 text-sm">Empresas Atendidas</div>
               </CardContent>
             </Card>

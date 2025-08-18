@@ -4,12 +4,12 @@ import { Card, CardContent } from "@/components/ui/card"
 export function TestimonialsSection() {
   const testimonials = [
     {
-      name: "María González",
-      position: "Directora de RRHH",
-      company: "Empresa Manufacturera S.A.",
-      image: "/placeholder.svg?height=80&width=80",
+      name: "Gonzalo Ruiz Diaz",
+      position: "Técnico Prevencionista de Riesgos",
+      company: "Andritz",
+      image: "assets/images/avatar/testimolial1.jpeg?height=80&width=80",
       rating: 5,
-      text: "El programa de capacitación de HUMAN transformó completamente nuestra cultura de seguridad. Nuestros empleados ahora se sienten más seguros y preparados para actuar en emergencias.",
+      text: "He participado en numerosos cursos de primeros auxilios, y este ha sido sin dudas el mejor; una metodología muy dinámica y efectiva.",
     },
     {
       name: "Carlos Rodríguez",
@@ -116,11 +116,11 @@ export function TestimonialsSection() {
               <div className="text-neutral-600 text-sm">Satisfacción del cliente</div>
             </div>
             <div>
-              <div className="text-3xl font-bold font-title text-primary mb-2">500+</div>
+              <div className="text-3xl font-bold font-title text-primary mb-2">1000+</div>
               <div className="text-neutral-600 text-sm">Profesionales capacitados</div>
             </div>
             <div>
-              <div className="text-3xl font-bold font-title text-primary mb-2">100+</div>
+              <div className="text-3xl font-bold font-title text-primary mb-2">20+</div>
               <div className="text-neutral-600 text-sm">Empresas atendidas</div>
             </div>
             <div>

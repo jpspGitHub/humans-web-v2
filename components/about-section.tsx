@@ -65,7 +65,7 @@ export function AboutSection() {
             </div>
             <div className="relative">
               <img
-                src="/assets/images/cover.jpg?height=400&width=500"
+                src="/assets/images/cover4.jpeg?height=400&width=500"
                 alt="Instructor de primeros auxilios"
                 className="rounded-xl shadow-lg w-full h-auto"
               />

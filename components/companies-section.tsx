@@ -1,17 +1,19 @@
+'use client'
 import { Building2, Users, TrendingUp, Shield, CheckCircle } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { scrollToSection } from "@/lib/utils"
 
 export function CompaniesSection() {
   const companyLogos = [
-    { name: "Empresa A", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Empresa B", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Empresa C", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Empresa D", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Empresa E", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Empresa F", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Empresa G", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Empresa H", logo: "/placeholder.svg?height=60&width=120" },
+    { name: "Fuerza Aerea Uruguaya", logo: "/assets/images/companies/corporation1.jpeg?height=120&width=240" },
+    { name: "Centro de Estudios Bioquimicos", logo: "/assets/images/companies/corporation12.jpeg?height=120&width=240" },
+    { name: "MAPFRE", logo: "/assets/images/companies/corporation3.png?height=120&width=240" },
+    { name: "Banco NacionalBanco de la Nación Argentina", logo: "/assets/images/companies/corporation4.jpeg?height=120&width=240" },
+    { name: "McDonalds", logo: "/assets/images/companies/corporation5.png?height=120&width=240" },
+    { name: "Costa Urbana Shoipping", logo: "/assets/images/companies/corporation9.jpeg?height=120&width=240" },
+    { name: "Doña Coca", logo: "/assets/images/companies/corporation11.jpeg?height=120&width=240" },
+    { name: "Club Bohemios", logo: "/assets/images/companies/corporation8.jpeg?height=120&width=240" },
   ]
 
   const industries = [
@@ -19,35 +21,36 @@ export function CompaniesSection() {
       icon: Building2,
       title: "Construcción",
       description: "Programas especializados para la industria de la construcción y obras civiles.",
-      companies: "25+ empresas",
+      companies: "5+ empresas",
     },
     {
       icon: Shield,
       title: "Salud",
       description: "Capacitación avanzada para hospitales, clínicas y centros de salud.",
-      companies: "15+ instituciones",
+      companies: "6+ instituciones",
     },
     {
       icon: Users,
       title: "Manufactura",
       description: "Formación integral para plantas industriales y centros de producción.",
-      companies: "30+ plantas",
+      companies: "8+ plantas",
     },
     {
       icon: TrendingUp,
       title: "Servicios",
       description: "Programas adaptados para empresas de servicios y centros comerciales.",
-      companies: "40+ empresas",
+      companies: "20+ empresas",
     },
   ]
 
   const benefits = [
-    "Reducción de accidentes laborales hasta en un 70%",
-    "Cumplimiento de normativas de seguridad y salud ocupacional",
-    "Mejora en la respuesta ante emergencias médicas",
-    "Formación de brigadas de emergencia certificadas",
-    "Acompañamiento continuo y seguimiento post-capacitación",
-    "Certificaciones reconocidas internacionalmente",
+    "Disminución de las secuelas permanentes hasta en un 50 % con primeros auxilios aplicados correctamente.",
+    "Mejora del tiempo de respuesta ante emergencias: de 10 a 2 minutos promedio con personal entrenado.",
+    "Formación de brigadas internas certificadas en RCP, DEA y manejo de traumas.",
+    "Reducción de bajas prolongadas: hasta 5 días menos de ausencia promedio por accidente.",
+    "Potencial de salvar una vida cada 5 años en empresas medianas gracias a intervención temprana.",
+    "Cumplimiento normativo (Decreto 330 y Ley 18.360).",
+    "Disminución de conflictos legales por falta de respuesta oportuna.",
   ]
 
   return (
@@ -56,18 +59,18 @@ export function CompaniesSection() {
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold font-title text-primary mb-6">
-            Empresas que confían en nosotros
+            Empresas e instituciones que confían en nosotros
           </h2>
           <p className="text-lg text-neutral-600 leading-relaxed">
-            Trabajamos con empresas líderes en diferentes sectores, brindando soluciones de capacitación adaptadas a sus
-            necesidades específicas.
+            Más de 20 empresas, instituciones, clubes y organismos eligieron nuestros programas para formar a sus equipos
+            y actuar con seguridad ante emergencias.
           </p>
         </div>
 
         {/* Company Logos */}
         <div className="mb-20">
           <h3 className="text-xl font-semibold font-title text-primary text-center mb-8">
-            Algunas de nuestras empresas aliadas
+            Algunos de los que ya dieron el primer paso
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center">
             {companyLogos.map((company, index) => (
@@ -109,8 +112,8 @@ export function CompaniesSection() {
           <div>
             <h3 className="text-2xl sm:text-3xl font-bold font-title text-primary mb-6">Beneficios para tu empresa</h3>
             <p className="text-neutral-600 leading-relaxed mb-8">
-              Nuestros programas de capacitación empresarial están diseñados para generar un impacto real en la
-              seguridad y bienestar de tus colaboradores, mientras cumples con todas las normativas vigentes.
+              Nuestros programas de capacitación están diseñados para generar un impacto real en la seguridad y salud ocupacional,
+              ayudando a responder de forma efectiva ante emergencias.
             </p>
             <ul className="space-y-4">
               {benefits.map((benefit, index) => (
@@ -123,13 +126,13 @@ export function CompaniesSection() {
           </div>
           <div className="relative">
             <img
-              src="/placeholder.svg?height=500&width=600"
+              src="/assets/images/cover3.jpeg?height=500&width=600"
               alt="Capacitación empresarial"
               className="rounded-xl shadow-lg w-full h-auto"
             />
             <div className="absolute -bottom-6 -left-6 bg-light-neutral p-6 rounded-xl shadow-lg border-l-4 border-primary-accent">
-              <div className="text-2xl font-bold font-title text-primary mb-1">70%</div>
-              <div className="text-sm text-neutral-600">Reducción promedio de accidentes</div>
+              <div className="text-2xl font-bold font-title text-primary mb-">70%</div>
+              <div className="text-sm text-neutral-600">Reduce hasta un 70% las muertes por paro cardíaco y secuelas en lesiones traumáticas.</div>
             </div>
           </div>
         </div>
@@ -140,20 +143,24 @@ export function CompaniesSection() {
             ¿Tu empresa necesita capacitación en primeros auxilios?
           </h3>
           <p className="text-neutral-200 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Diseñamos programas personalizados que se adaptan a las necesidades específicas de tu sector y empresa.
-            Contáctanos para una evaluación gratuita.
+            Creamos programas personalizados que se adaptan 100 % a tu sector, equipo y tiempos.
+            <br />
+            Contanos tu necesidad y diseñamos la solución.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary-accent hover:bg-primary-accent/90 text-light-neutral px-8 py-4">
+            <Button size="lg"
+              className="bg-primary-accent hover:bg-primary-accent/90 text-light-neutral px-8 py-4"
+              onClick={() => scrollToSection('contact', 'companies-section')}
+            >
               Solicitar Cotización
             </Button>
-            <Button
+            {/* <Button
               size="lg"
               variant="outline"
               className="border-light-neutral text-light-neutral hover:bg-light-neutral hover:text-primary px-8 py-4 bg-transparent"
             >
               Descargar Brochure
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>
