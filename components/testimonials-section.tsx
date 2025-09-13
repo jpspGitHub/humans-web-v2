@@ -4,54 +4,61 @@ import { Card, CardContent } from "@/components/ui/card"
 export function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Gonzalo Ruiz Diaz",
-      position: "Técnico Prevencionista de Riesgos",
-      company: "Andritz",
-      image: "assets/images/avatar/testimolial1.jpeg?height=80&width=80",
-      rating: 5,
-      text: "He participado en numerosos cursos de primeros auxilios, y este ha sido sin dudas el mejor; una metodología muy dinámica y efectiva.",
+      "name": "Gonzalo Ruiz Diaz",
+      "position": "Técnico Prevencionista de Riesgos",
+      "company": "Andritz",
+      "image": "assets/images/avatar/testimolial1.jpeg?height=80&width=80",
+      "rating": 5,
+      "text": "He participado en numerosos cursos de primeros auxilios, y este ha sido sin dudas el mejor; una metodología muy dinámica y efectiva.",
+    },{
+      "name": "Micaela Karan",
+      "position": "Agente de Soporte Técnico",
+      "company": "Fixed",
+      "image": "assets/images/avatar/fixeduy_logo.jpeg?height=80&width=80",
+      "rating": 5,
+      "text": "El curso fue una gran instancia de adquirir conocimientos que son esenciales para la vida en sociedad. Hay muchas cosas que desconocemos o no intervenimos por no saber cómo actuar, este curso nos dio un empujón para animarnos a poder ayudar al otro en una situación de “riesgo”."
     },
     {
-      name: "Carlos Rodríguez",
-      position: "Gerente de Operaciones",
-      company: "Construcciones del Valle",
-      image: "/placeholder.svg?height=80&width=80",
-      rating: 5,
-      text: "La formación fue excepcional. Los instructores son altamente profesionales y el material didáctico es de primera calidad. Definitivamente recomendamos sus servicios.",
+      "name": "Rony Silva",
+      "position": "Referente Técnico de Soporte",
+      "company": "Fixed",
+      "image": "assets/images/avatar/fixeduy_logo.jpeg?height=80&width=80",
+      "rating": 5,
+      "text": "En mi opinión fue una muy buena experiencia y actividad, enriquecedora y necesaria, nos brindó conocimientos para saber como actuar bajo una situación urgente que se puede presentar en cualquier momento."
+    },{
+      "name": "Valentina Poloni",
+      "position": "Agente de Soporte Técnico",
+      "company": "Fixed",
+      "image": "assets/images/avatar/fixeduy_logo.jpeg?height=80&width=80",
+      "rating": 5,
+      "text": "La jornada fue una experiencia valiosa, no solo por los conocimientos técnicos que adquirimos, sino por el enfoque humano y cercano con el que se transmitieron. Agradezco el profesionalismo, la claridad y el compromiso del equipo capacitador. Nos llevamos herramientas concretas y, sobre todo, una mayor conciencia sobre la importancia de cuidarnos entre todos."
     },
     {
-      name: "Ana Patricia Morales",
-      position: "Coordinadora de Salud Ocupacional",
-      company: "Hospital San Rafael",
-      image: "/placeholder.svg?height=80&width=80",
-      rating: 5,
-      text: "Como profesional de la salud, puedo afirmar que el nivel de capacitación de HUMAN es excepcional. Sus técnicas están actualizadas con los últimos estándares internacionales.",
+      "name": "Micaella López",
+      "position": "Gerenta Experiencia del Cliente",
+      "company": "Fixed",
+      "image": "assets/images/avatar/fixeduy_logo.jpeg?height=80&width=80",
+      "rating": 5,
+      "text": "Considero que fue una experiencia muy enriquecedora a nivel personal y grupal. Recibimos conocimientos técnicos y prácticos lo que nos permitió afianzar lo aprendido mediante simulaciones, favoreciendo la comprensión de cada tema. Fue una experiencia positiva y necesaria que destaca la importancia de estar preparados ante una situación de emergencia la cual puede marcar la diferencia entre la vida y la muerte. Gracias por compartirnos sus conocimientos!"
     },
     {
-      name: "Roberto Silva",
-      position: "Director de Seguridad",
-      company: "Industrias Químicas Ltda.",
-      image: "/placeholder.svg?height=80&width=80",
-      rating: 5,
-      text: "Llevamos 3 años trabajando con HUMAN y los resultados han sido extraordinarios. Han reducido significativamente nuestros incidentes laborales.",
+      "name": "Lucia Bazán",
+      "position": "Agente de Soporte Técnico",
+      "company": "Fixed",
+      "image": "assets/images/avatar/fixeduy_logo.jpegheight=80&width=80",
+      "rating": 5,
+      "text": "Considero que fue una experiencia muy buena, interesante. Donde pudimos aprender técnicas que se pueden usar en situaciones de emergencia. Tomando como base la información teórica práctica dada."
     },
-    {
-      name: "Lucía Fernández",
-      position: "Jefe de Enfermería",
-      company: "Clínica Santa María",
-      image: "/placeholder.svg?height=80&width=80",
-      rating: 5,
-      text: "La metodología de enseñanza es muy práctica y efectiva. Nuestro personal médico mejoró notablemente sus habilidades en primeros auxilios después de la capacitación.",
-    },
-    {
-      name: "Diego Martínez",
-      position: "Coordinador de Brigadas",
-      company: "Centro Comercial Plaza Mayor",
-      image: "/placeholder.svg?height=80&width=80",
-      rating: 5,
-      text: "HUMAN nos ayudó a formar brigadas de emergencia altamente capacitadas. Su acompañamiento continuo ha sido fundamental para mantener nuestros estándares de seguridad.",
-    },
+    // {
+    //   "name": "Federica Echevarría",
+    //   "position": "Agente de Soporte Técnico",
+    //   "company": "Fixed",
+    //   "image": "assets/images/avatar/fixeduy_logo.jpeg?height=80&width=80",
+    //   "rating": 5,
+    //   "text": "Estuvo muy bueno el curso, ya que aprendes con la práctica, lo cual destaco, además de la buena onda y disposición."
+    // }
   ]
+  
 
   return (
     <section id="testimolials" className="py-20 bg-light-neutral">
