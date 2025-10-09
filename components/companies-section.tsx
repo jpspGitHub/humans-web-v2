@@ -16,16 +16,6 @@ export function CompaniesSection() {
     { name: "Club Bohemios", logo: "/assets/images/companies/corporation8.jpeg?height=120&width=240" },
     { name: "Su Emergencia", logo: "/assets/images/companies/corporation14.jpeg?height=120&width=240" },
 
-
-    // { name: "Fuerza Aerea Uruguaya", logo: "/assets/images/companies/corporation1.jpeg?height=120&width=240" },
-    // { name: "Centro de Estudios Bioquimicos", logo: "/assets/images/companies/corporation12.jpeg?height=120&width=240" },
-    // { name: "MAPFRE", logo: "/assets/images/companies/corporation3.png?height=120&width=240" },
-    // { name: "Banco NacionalBanco de la Nación Argentina", logo: "/assets/images/companies/corporation4.jpeg?height=120&width=240" },
-    // { name: "McDonalds", logo: "/assets/images/companies/corporation5.png?height=120&width=240" },
-    // { name: "Costa Urbana Shoipping", logo: "/assets/images/companies/corporation9.jpeg?height=120&width=240" },
-    // { name: "Doña Coca", logo: "/assets/images/companies/corporation11.jpeg?height=120&width=240" },
-    // { name: "Club Bohemios", logo: "/assets/images/companies/corporation8.jpeg?height=120&width=240" },
-    // { name: "Su Emergencia", logo: "/assets/images/companies/corporation14.jpeg?height=120&width=240" },
   ]
 
   const industries = [
