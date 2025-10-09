@@ -14,6 +14,18 @@ export function CompaniesSection() {
     { name: "Costa Urbana Shoipping", logo: "/assets/images/companies/corporation9.jpeg?height=120&width=240" },
     { name: "Doña Coca", logo: "/assets/images/companies/corporation11.jpeg?height=120&width=240" },
     { name: "Club Bohemios", logo: "/assets/images/companies/corporation8.jpeg?height=120&width=240" },
+    { name: "Su Emergencia", logo: "/assets/images/companies/corporation14.jpeg?height=120&width=240" },
+
+
+    // { name: "Fuerza Aerea Uruguaya", logo: "/assets/images/companies/corporation1.jpeg?height=120&width=240" },
+    // { name: "Centro de Estudios Bioquimicos", logo: "/assets/images/companies/corporation12.jpeg?height=120&width=240" },
+    // { name: "MAPFRE", logo: "/assets/images/companies/corporation3.png?height=120&width=240" },
+    // { name: "Banco NacionalBanco de la Nación Argentina", logo: "/assets/images/companies/corporation4.jpeg?height=120&width=240" },
+    // { name: "McDonalds", logo: "/assets/images/companies/corporation5.png?height=120&width=240" },
+    // { name: "Costa Urbana Shoipping", logo: "/assets/images/companies/corporation9.jpeg?height=120&width=240" },
+    // { name: "Doña Coca", logo: "/assets/images/companies/corporation11.jpeg?height=120&width=240" },
+    // { name: "Club Bohemios", logo: "/assets/images/companies/corporation8.jpeg?height=120&width=240" },
+    // { name: "Su Emergencia", logo: "/assets/images/companies/corporation14.jpeg?height=120&width=240" },
   ]
 
   const industries = [
@@ -72,16 +84,16 @@ export function CompaniesSection() {
           <h3 className="text-xl font-semibold font-title text-primary text-center mb-8">
             Algunos de los que ya dieron el primer paso
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center">
+          <div className="flex justify-center items-center flex-wrap gap-8">
             {companyLogos.map((company, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center p-4 bg-light-neutral rounded-lg shadow-sm hover:shadow-md transition-shadow grayscale hover:grayscale-0 transition-all duration-300"
+                className="flex items-center min-w-40 w-40 justify-center p-4 bg-light-neutral rounded-lg shadow-sm hover:shadow-md transition-shadow grayscale hover:grayscale-0 transition-all duration-300"
               >
                 <img
                   src={company.logo || "/placeholder.svg"}
                   alt={company.name}
-                  className="max-h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity"
+                  className="max-h-20 h-20 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity"
                 />
               </div>
             ))}
