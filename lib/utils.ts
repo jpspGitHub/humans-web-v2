@@ -1,6 +1,8 @@
+// 'use client'
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 import { track } from '@vercel/analytics/server';
+import { useRouter } from "next/navigation";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -13,3 +15,8 @@ export function scrollToSection(id: string, source: string) {
     element.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 };
+
+// export function navigateToUrl(url: string, params: string[] = []) {
+//   const router = useRouter();
+//   router.push(`${url}/${params.join('/')}`);
+// }

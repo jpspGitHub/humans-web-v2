@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import logo from './../public/assets/images/logo-large-white.svg'
 import Image from "next/image"
-import { useRouter } from "next/router"
 import { scrollToSection } from "@/lib/utils"
 
 export function HeroSection() {

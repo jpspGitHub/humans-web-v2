@@ -1,42 +1,12 @@
 'use client'
 
-import { BookOpen, Building, Users, BadgeIcon as Certificate } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { scrollToSection } from "@/lib/utils"
-
+import { useRouter } from "next/navigation"
+import services from "@/data/services"
 export function ServicesSection() {
-  const services = [
-    {
-      icon: BookOpen,
-      title: "Respuesta en Emergencias Urbanas, Acuáticas, Agrestes Y Confinados",
-      description: "Entrenamiento técnico para intervenir con eficacia en distintos escenarios críticos. Formamos primeros respondientes preparados para actuar con seguridad, precisión y humanidad cuando cada segundo cuenta.",
-      features: ["Materiales y recursos completos", "Certificaciones internacionales", "Certificacion nacional (ley 18.360 - decreto 330/009)"],
-      duration: "16-40 horas",
-    },
-    {
-      icon: Building,
-      title: "Preparación Física y Respuesta Operativa",
-      description:
-        `Entrenamiento técnico y corporal enfocado en la exigencia real del rol. Pensado para aspirantes a guardavidas, nadadores de aguas abiertas, personal operativo, brigadistas y equipos de respuesta rápida.`,
-      features: ["Nadadores de Aguas Abiertas | Guardavidas", "Brigadas de emergencia", "Equipos de Respuesta Rapida"],
-      duration: "Personalizado",
-    },
-    {
-      icon: Users,
-      title: "Bienestar y Salud",
-      description: "Articulamos cuerpo, mente y vínculo humano para brindar contención, acompañar y sostener emocionalmente a otros en momentos críticos. Sabemos que intervenir no es solo una cuestión técnica, por eso integramos la psicología como parte esencial de la preparación.",
-      features: ["Apoyo emocional en crisis", "Autocuidado del interviniente", "Primeros Auxilios Psicológicos (PAPs)"],
-      duration: "80 horas",
-    },
-    // {
-    //   icon: Certificate,
-    //   title: "Recertificaciones",
-    //   description: "Mantén tus conocimientos actualizados con nuestros programas de recertificación periódica.",
-    //   features: ["Actualización de técnicas", "Nuevos protocolos", "Certificado renovado"],
-    //   duration: "8 horas",
-    // },
-  ]
+  const router = useRouter();
 
   return (
     <section id="services" className="py-20 bg-light-neutral">
@@ -76,9 +46,15 @@ export function ServicesSection() {
                 <Button
                   variant="outline"
                   className="w-full border-primary-accent text-primary-accent hover:bg-primary-accent hover:text-light-neutral bg-transparent"
-                  onClick={() => scrollToSection('contact', `services-section (${service.title})`)}
+                  onClick={() => {
+                    if (service.action === "contact") {
+                      scrollToSection('contact', `services-section (${service.title})`)
+                    } else {
+                      router.push(service.action)
+                    }
+                  }}
                 >
-                  Más Información
+                  {service.actionText}
                 </Button>
               </CardContent>
             </Card>
