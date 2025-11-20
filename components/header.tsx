@@ -14,11 +14,11 @@ export function Header() {
 
   const navItems = [
     { href: "/#hero", label: "Inicio" },
-    { href: "#about", label: "Quiénes Somos" },
+    { href: "/#about", label: "Quiénes Somos" },
     // { href: "#metodologia", label: "Metodología" },
-    { href: "#services", label: "Capacitaciones" },
+    { href: "/#services", label: "Capacitaciones" },
     { href: "/#companies", label: "Empresas" },
-    { href: "#contact", label: "Contacto" },
+    { href: "/#contact", label: "Contacto" },
   ]
 
   return (
