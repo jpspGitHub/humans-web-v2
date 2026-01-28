@@ -15,6 +15,7 @@ export function CompaniesSection() {
     { name: "Doña Coca", logo: "/assets/images/companies/corporation11.jpeg?height=120&width=240" },
     { name: "Club Bohemios", logo: "/assets/images/companies/corporation8.jpeg?height=120&width=240" },
     { name: "Su Emergencia", logo: "/assets/images/companies/corporation14.jpeg?height=120&width=240" },
+    { name: "Stiler", logo: "/assets/images/companies/corporation15.jpeg?height=120&width=240" },
 
   ]
 

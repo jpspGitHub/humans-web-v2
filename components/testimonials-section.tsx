@@ -45,7 +45,7 @@ export function TestimonialsSection() {
       "name": "Lucia Bazán",
       "position": "Agente de Soporte Técnico",
       "company": "Fixed",
-      "image": "assets/images/avatar/fixeduy_logo.jpegheight=80&width=80",
+      "image": "assets/images/avatar/fixeduy_logo.jpeg?height=80&width=80",
       "rating": 5,
       "text": "Considero que fue una experiencia muy buena, interesante. Donde pudimos aprender técnicas que se pueden usar en situaciones de emergencia. Tomando como base la información teórica práctica dada."
     },
