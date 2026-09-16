@@ -11,12 +11,13 @@ import { Button } from "./ui/button"
 // import "./styles.css";
 export function Footer() {
   const quickLinks = [
-    { href: "#hero", label: "Inicio" },
-    { href: "#about", label: "Quiénes Somos" },
-    // { href: "#metodologia", label: "Metodología" },
-    { href: "#services", label: "Capacitaciones" },
-    // { href: "#empresas", label: "Empresas" },
-    { href: "#contact", label: "Contacto" },
+    { href: "/#hero", label: "Inicio" },
+    { href: "/#about", label: "Quiénes Somos" },
+    // { href: "/#metodologia", label: "Metodología" },
+    { href: "/#services", label: "Capacitaciones" },
+    // { href: "/#empresas", label: "Empresas" },
+    { href: "/eventos/cirea-2026", label: "CIREA 2026" },
+    { href: "/contacto", label: "Contacto" },
   ]
 
   const services = [

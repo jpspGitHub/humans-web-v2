@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import logo from './../public/assets/images/logo-mini.svg'
 import Image from "next/image"
-import { scrollToSection } from "@/lib/utils"
+
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,7 +18,8 @@ export function Header() {
     // { href: "#metodologia", label: "Metodología" },
     { href: "/#services", label: "Capacitaciones" },
     { href: "/#companies", label: "Empresas" },
-    { href: "/#contact", label: "Contacto" },
+    { href: "/eventos/cirea-2026", label: "CIREA 2026" },
+    { href: "/contacto", label: "Contacto" },
   ]
 
   return (
@@ -26,7 +27,7 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link id="site-home-link" href="/" className="flex items-center space-x-2">
             <Image src={logo.src} alt="Logo" width={50} height={50} className="rounded-full" />
           </Link>
 
@@ -47,8 +48,8 @@ export function Header() {
           <div className="hidden md:block">
             <Button
               className="bg-primary-accent hover:bg-primary-accent/90 text-light-neutral"
-              onClick={() => scrollToSection('contact', 'header(CTA)')}
-            >Contactar Ahora</Button>
+              asChild
+            ><Link href="/contacto">Contactar Ahora</Link></Button>
           </div>
 
           {/* Mobile Menu */}
@@ -72,9 +73,9 @@ export function Header() {
                 ))}
                 <Button
                   className="bg-primary-accent hover:bg-primary-accent/90 text-light-neutral mt-4"
-                  onClick={() => scrollToSection('contact', 'header')}
+                  asChild
                 >
-                  Contactar Ahora
+                  <Link href="/contacto" onClick={() => setIsOpen(false)}>Contactar Ahora</Link>
                 </Button>
               </div>
             </SheetContent>

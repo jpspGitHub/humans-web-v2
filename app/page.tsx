@@ -1,3 +1,4 @@
+import { EventPromoModal } from "@/components/event-promo-modal"
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { AboutSection } from "@/components/about-section"
@@ -12,6 +13,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <EventPromoModal />
       <main>
         <HeroSection />
         <AboutSection />
